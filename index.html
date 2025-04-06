@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Rated Food - Find Top Restaurants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="map"></div>
+
+    <div class="info-panel card">
+        <div class="panel-header">
+             <h1><span class="material-icons title-icon">restaurant</span> Eat Rated Food</h1>
+            <div class="city-search">
+                <label for="city-input" class="input-label">Enter a city name to find top-rated restaurants</label>
+                <div class="input-group">
+                    <input type="text" id="city-input" placeholder="e.g., Vilnius, London, Tokyo" list="city-suggestions">
+                    <datalist id="city-suggestions">
+                        <option value="Vilnius">
+                        <option value="Kaunas">
+                        <option value="London">
+                        <option value="New York">
+                        <option value="Tokyo">
+                    </datalist>
+                    <button id="search-button" class="button-primary" aria-label="Search City">
+                        Search
+                    </button>
+                </div>
+            </div>
+         </div>
+
+        <div class="list-container">
+            <ul id="restaurant-list">
+                </ul>
+            <div id="loading-indicator" class="loading hidden">Loading restaurants...</div>
+        </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8zwHlaLfGdMd0aAGXug_GjCpQRHhZ_F8&libraries=places,geometry&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

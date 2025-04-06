@@ -1,0 +1,9 @@
+# netlify.toml
+[functions]
+  # Specifies the directory for Netlify Functions source code
+  directory = "netlify/functions/"
+
+# Optional: Tell Netlify which Node.js version to use for functions
+# Check Netlify docs for current supported versions if needed
+[build.environment]
+  NODE_VERSION = "18"
